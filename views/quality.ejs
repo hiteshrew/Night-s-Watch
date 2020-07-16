@@ -1,0 +1,118 @@
+<%- include("partials/header.ejs") %>
+    <style>
+        body {
+            font-family: Arimo, Arial, Helvetica, lucida grande, sans-serif;
+            background-color: #1d1d1d !important;
+        }
+
+        .choice-text {
+            text-align: center;
+            font-size: 6rem;
+            color: white;
+            font-family: proxima-nova, sans-serif;
+            font-weight: 600;
+            margin-bottom: 30px;
+            background-color: transparent;
+        }
+
+        .quality-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            text-align: center;
+            max-width: 100%;
+            margin-top: 30vh;
+            text-align: center;
+            margin: auto;
+            justify-content: space-around;
+
+        }
+
+        .quality-flex-items {
+            width: 400px;
+            border-radius: 10px;
+            margin: 16px auto;
+            height: 250px;
+            text-align: center;
+            display: table;
+        }
+
+        .quality-flex-items:hover {
+            transform: scale(1.05);
+            transition: ease-in-out 0.3s;
+            border: #1DB954 3px solid;
+        }
+
+        a,
+        a:hover {
+            text-decoration: none;
+        }
+
+        .qual-text {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+            display: table-cell;
+            vertical-align: middle;
+            text-decoration: none;
+        }
+        
+       
+    </style>
+    
+</head>
+
+<body>
+
+  
+
+    <h1 class="choice-text">Quality matters</h1>
+
+
+    <div class="quality-container">
+        <a href="/movie/quality/720p">
+            <div class="quality-flex-items"
+                style="background-image: url(/images/720p.jpg); background-position: center; background-size: cover;">
+                <h2 class="qual-text">720p</h2>
+            </div>
+        </a>
+
+        <a href="/movie/quality/1080p">
+            <div class="quality-flex-items"
+                style="background-image: url(/images/1080p.jpg); background-position: center; background-size: cover;">
+                <h2 class="qual-text">1080p</h2>
+            </div>
+        </a>
+
+        <a href="/movie/quality/2160p">
+            <div class="quality-flex-items"
+                style="background-image: url(/images/2160p.jpg); background-position: center; background-size: cover;">
+                <h2 class="qual-text">2160p</h2>
+            </div>
+        </a>
+
+        <a href="/movie/quality/3D">
+            <div class="quality-flex-items"
+                style="background-image: url(/images/3d.jpg); background-position: center; background-size: cover;">
+                <h2 class="qual-text">3D</h2>
+            </div>
+        </a>
+
+
+        <a href="/movie/quality/All">
+            <div class="quality-flex-items"
+                style="background-image: url(/images/all.jpg); background-position: center; background-size: cover;">
+                <h2 class="qual-text">All</h2>
+            </div>
+        </a>
+
+    </div>
+    <script type="text/javascript"> 
+        window.history.forward(); 
+        function noBack() { 
+            window.history.forward(); 
+        } 
+    </script> 
+
+    <%- include("partials/footer.ejs") %>

@@ -1,0 +1,115 @@
+<%- include("partials/header.ejs") %>
+    <style>
+        body {
+            font-family: Arimo, Arial, Helvetica, lucida grande, sans-serif;
+            background-color: #1d1d1d !important;
+        }
+
+        .choice-text {
+            text-align: center;
+            font-size: 6rem;
+            color: white;
+            font-family: proxima-nova, sans-serif;
+            font-weight: 600;
+            margin-bottom: 30px;
+            background-color: transparent;
+        }
+
+        .preferences-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            text-align: center;
+            padding: 28px;
+            max-width: 100%;
+            margin-top: 2vh;
+            justify-content: space-evenly;
+
+        }
+
+        .preferences-flex-item {
+            width: 400px;
+            margin: 16px auto;
+            height: 250px;
+            border-radius: 10px;
+            text-align: center;
+            display: table;
+        }
+
+        .preferences-flex-item:hover {
+            transform: scale(1.05);
+            transition: ease-in-out 0.3s;
+            border: #1DB954 3px solid;
+
+        }
+
+        a,
+        a:hover {
+            text-decoration: none;
+        }
+
+        .pref-text {
+
+            color: white;
+            font-weight: 700;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 10px;
+            display: table-cell;
+            vertical-align: middle;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <h1 class="choice-text">What's your Kink?</h1>
+
+    <div class="preferences-container">
+        <a href="/movie/preferences/download_count">
+            <div class="preferences-flex-item"
+                style="background-image: url(/images/downloads.jpg); background-position: center; background-size: cover;">
+                <h2 class="pref-text">Number of Downloads</h2>
+            </div>
+        </a>
+
+        <a href="/movie/preferences/year">
+            <div class="preferences-flex-item"
+                style="background-image: url(/images/latest.jpg); background-position: center; background-size: cover;">
+                <h2 class="pref-text">Latest Stuff</h2>
+            </div>
+        </a>
+
+        <a href="/movie/preferences/rating">
+            <div class="preferences-flex-item"
+                style="background-image: url(/images/rating.jpg); background-position: center; background-size: cover;">
+                <h2 class="pref-text">Ratings</h2>
+            </div>
+        </a>
+
+        <a href="/movie/preferences/seeds">
+            <div class="preferences-flex-item"
+                style="background-image: url(/images/seeds.jpg); background-position: center; background-size: cover;">
+                <h2 class="pref-text">Seeds on the Torrent</h2>
+            </div>
+        </a>
+
+        <a href="/movie/preferences/like_count">
+            <div class="preferences-flex-item"
+                style="background-image: url(/images/likes.jpg); background-position: center; background-size: cover;">
+                <h2 class="pref-text">Number of Likes</h2>
+            </div>
+        </a>
+
+    </div>
+    <script type="text/javascript"> 
+        window.history.forward(); 
+        function noBack() { 
+            window.history.forward(); 
+        } 
+    </script> 
+    
+    <%- include("partials/footer.ejs") %>

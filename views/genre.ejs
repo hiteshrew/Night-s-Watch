@@ -1,0 +1,47 @@
+<%- include("./partials/header.ejs") %>
+
+
+<h1 class="choice-text">Choose a genre</h1>
+
+<div class="genre-flex-container">
+	<a href="/movie/action" class="links">
+		<div class="flex-items-genre "
+			style="background-image: url('images/action.jpg'); background-position: center; background-size: cover;">
+			<span class="grid-text">Action</span></div>
+	</a>
+	<a href="/movie/comedy" class="links">
+		<div class="flex-items-genre"
+			style="background-image: url('images/comedy.jpg'); background-position: center; background-size: cover;">
+			<span class="grid-text">Comedy</span></div>
+	</a>
+	<a href="/movie/romance" class="links">
+		<div class="flex-items-genre"
+			style="background-image: url('images/romantic.jpg'); background-position: center; background-size: cover;">
+			<span class="grid-text">Romance</span></div>
+	</a>
+	<a href="/movie/adventure" class="links">
+		<div class="flex-items-genre"
+			style="background-image: url('images/adventure.jpg'); background-position: center; background-size: cover;">
+			<span class="grid-text">Adventure</span></div>
+	</a>
+	<a href="/movie/sci-fi" class="links">
+		<div class="flex-items-genre"
+			style="background-image: url('images/sci-fi.jpg'); background-position: center; background-size: cover;">
+			<span class="grid-text">Sci-fi</span></div>
+	</a>
+	<a href="/movie/horror" class="links">
+		<div class="flex-items-genre"
+			style="background-image: url('images/horror.jpg'); background-position: center; background-size: cover;">
+			<span class="grid-text">Horror</span></div>
+	</a>
+
+
+</div>
+
+<script type="text/javascript"> 
+	window.history.forward(); 
+	function noBack() { 
+		window.history.forward(); 
+	} 
+</script> 
+<%- include("./partials/footer.ejs") %>
